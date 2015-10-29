@@ -1,0 +1,10 @@
+<ul>
+ <% @cats.each do |cat| %>
+  <li>
+    <%= image_tag cat.image_uri, width: "300px" %>
+    <%= link_to cat.name, cat_path(cat) %>
+  </li>
+  <% end %>
+ <li><%= link_to "Get Started", "/cats?random=true" %></li>
+</ul>
+
